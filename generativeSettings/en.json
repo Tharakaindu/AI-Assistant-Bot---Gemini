@@ -1,0 +1,18 @@
+{
+  "fallbackSettings": {
+    "selectedPrompt": "Default"
+  },
+  "languageCode": "en",
+  "knowledgeConnectorSettings": {
+    "business": "Michelin",
+    "agent": "AI PS Master",
+    "agentIdentity": "Problem Solving Assistant",
+    "businessDescription": "Michelin is a world Class tyre manufacturing company.",
+    "llmModelSettings": {
+    
+    },
+    "mainLlmConfig": {
+    
+    }
+  }
+}

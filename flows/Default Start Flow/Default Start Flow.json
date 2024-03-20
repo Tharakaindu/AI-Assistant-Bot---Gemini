@@ -1,0 +1,66 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hi! How are you doing?", "Hello! How can I help you?", "Good day! What can I do for you today?", "Greetings! How can I assist?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "d311c4e1-69c8-4cd8-8ecd-e2af61e1cbd3"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "enableGenerativeFallback": true
+    },
+    "name": "1848361a-be9e-40a7-aa89-2f077526346a"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "1758fda3-b7a6-4eea-8a91-609907b67d04"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.69999999
+  },
+  "knowledgeConnectorSettings": {
+    "enabled": true,
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.knowledge.answers[0]" ]
+        },
+        "languageCode": "en"
+      }, {
+        "languageCode": "en",
+        "knowledgeInfoCard": {
+          "maximumSnippets": 1
+        }
+      } ]
+    },
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/173783207207/locations/global/collections/default_collection/dataStores/aipsmasterdatastore_1709815871981",
+      "languageCode": "en"
+    } ]
+  }
+}
